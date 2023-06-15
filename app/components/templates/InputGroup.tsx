@@ -17,11 +17,11 @@ const InputGroup = React.forwardRef<HTMLInputElement, InputGroupProps>(
           {required && <span className="text-[#ff0000] text-lg ml-1">*</span>}
         </label>
         <div className="mb-[20px]">
-          <Input id={id} {...rest} ref={ref} />
+          <Input id={id} ref={ref} errorMessage={errorMessage} {...rest} />
 
           {errorMessage && (
             <div>
-              <p className="mt-[4px] text-xs">{errorMessage}</p>
+              <p className="mt-[4px] text-xs text-red-500">{errorMessage}</p>
             </div>
           )}
         </div>

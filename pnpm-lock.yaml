@@ -6,6 +6,7 @@ specifiers:
   '@types/react': 18.2.12
   '@types/react-dom': 18.2.5
   autoprefixer: 10.4.14
+  clsx: ^1.2.1
   eslint: 8.42.0
   eslint-config-next: 13.4.5
   next: 13.4.5
@@ -14,6 +15,7 @@ specifiers:
   react-dom: 18.2.0
   react-hook-form: ^7.44.3
   react-icons: ^4.9.0
+  tailwind-merge: ^1.13.1
   tailwindcss: 3.3.2
   typescript: 5.1.3
   zod: ^3.21.4
@@ -24,6 +26,7 @@ dependencies:
   '@types/react': 18.2.12
   '@types/react-dom': 18.2.5
   autoprefixer: 10.4.14_postcss@8.4.24
+  clsx: 1.2.1
   eslint: 8.42.0
   eslint-config-next: 13.4.5_tizxnkcvjrb4cldxgwq5h3lj5u
   next: 13.4.5_biqbaboplfbrettd7655fr4n2y
@@ -32,6 +35,7 @@ dependencies:
   react-dom: 18.2.0_react@18.2.0
   react-hook-form: 7.44.3_react@18.2.0
   react-icons: 4.9.0_react@18.2.0
+  tailwind-merge: 1.13.1
   tailwindcss: 3.3.2
   typescript: 5.1.3
   zod: 3.21.4
@@ -631,6 +635,11 @@ packages:
 
   /client-only/0.0.1:
     resolution: {integrity: sha512-IV3Ou0jSMzZrd3pZ48nLkT9DA7Ag1pnPzaiQhpW7c3RbcqqzvzzVu+L8gfqMp/8IM2MQtSiqaCxrrcfu8I8rMA==}
+    dev: false
+
+  /clsx/1.2.1:
+    resolution: {integrity: sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==}
+    engines: {node: '>=6'}
     dev: false
 
   /color-convert/2.0.1:
@@ -2450,6 +2459,10 @@ packages:
     dependencies:
       '@pkgr/utils': 2.4.1
       tslib: 2.5.3
+    dev: false
+
+  /tailwind-merge/1.13.1:
+    resolution: {integrity: sha512-tRtRN22TDokGi2TuYSvuHQuuW6BJ/zlUEG+iYpAQ9i66msc/0eU/+HPccbPnNNH0mCPp0Ob8thaC8Uy9CxHitQ==}
     dev: false
 
   /tailwindcss/3.3.2:
