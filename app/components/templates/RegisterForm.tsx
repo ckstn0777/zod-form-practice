@@ -7,18 +7,22 @@ import InputGroup from "./InputGroup";
 import Button from "../common/Button";
 import { RegisterSchemaType, registerSchema } from "@/app/lib/RegisterSchema";
 import RegisterAgree from "./RegisterAgree";
+import React from "react";
 
 export default function RegisterForm() {
   const {
     register,
     handleSubmit,
+    setValue,
     formState: { errors },
   } = useForm<RegisterSchemaType>({
     resolver: zodResolver(registerSchema),
   });
 
+  const [submitBtnDisabled, setSubmitBtnDisabled] = React.useState(true);
+
   const onSubmit: SubmitHandler<RegisterSchemaType> = (data) =>
-    alert(JSON.stringify(data));
+    console.log(data);
 
   return (
     <form className="w-full" onSubmit={handleSubmit(onSubmit)}>
@@ -69,9 +73,16 @@ export default function RegisterForm() {
         {...register("recommendationCode")}
       />
 
-      <RegisterAgree />
+      <RegisterAgree
+        setSubmitBtnDisabled={setSubmitBtnDisabled}
+        /*
+        // @ts-ignore */
+        setValue={setValue}
+      />
 
-      <Button type="submit">가입하기</Button>
+      <Button type="submit" disabled={submitBtnDisabled}>
+        가입하기
+      </Button>
     </form>
   );
 }

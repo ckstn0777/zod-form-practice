@@ -27,6 +27,7 @@ export const registerSchema = z
       .string()
       .regex(/^[a-z]{0,}$/, "추천코드는 소문자로 입력 가능합니다")
       .optional(),
+    agree: z.string(),
   })
   .refine((data) => data.password === data.passwordCheck, {
     path: ["passwordCheck"],
