@@ -6,6 +6,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import InputGroup from "./InputGroup";
 import Button from "../common/Button";
 import { RegisterSchemaType, registerSchema } from "@/app/lib/RegisterSchema";
+import RegisterAgree from "./RegisterAgree";
 
 export default function RegisterForm() {
   const {
@@ -67,6 +68,8 @@ export default function RegisterForm() {
         required={false}
         {...register("recommendationCode")}
       />
+
+      <RegisterAgree />
 
       <Button type="submit">가입하기</Button>
     </form>
